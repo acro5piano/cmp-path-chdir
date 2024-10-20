@@ -142,7 +142,7 @@ source._candidates = function(_, dirname, include_hidden, option, callback)
     end
 
     local item = {
-      label = name,
+      label = '$PWD/' .. name,
       filterText = name,
       insertText = name,
       kind = cmp.lsp.CompletionItemKind.File,
