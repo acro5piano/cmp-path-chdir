@@ -156,9 +156,9 @@ source._candidates = function(_, dirname, include_hidden, option, callback)
     if fs_type == 'directory' then
       item.kind = cmp.lsp.CompletionItemKind.Folder
       if option.label_trailing_slash then
-        item.label = name .. '/'
+        item.label = '$PWD/' .. name .. '/'
       else
-        item.label = name
+        item.label = '$PWD/' .. name
       end
       item.insertText = name .. '/'
       if not option.trailing_slash then
